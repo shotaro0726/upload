@@ -3,12 +3,12 @@ import tensorflow as tf
 import io
 import base64
 from django.db import models
-from tensorflow.python import keras
+from tensorflow.python import keras # from tensorflow import keras
 from tensorflow.python.keras.models import load_model
 
 from PIL import Image
 
-graph = tf.get_default_graph()
+graph = tf.get_default_graph()  # tf.compat.v1.get_default_graph()
 
 class Photo(models.Model):
     image = models.ImageField(upload_to='photos')
